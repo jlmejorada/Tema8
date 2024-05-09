@@ -1,4 +1,4 @@
-package ejercicio02;
+package excepciones.ejercicio02;
 
 public class NegativeSecondException extends Exception {
 

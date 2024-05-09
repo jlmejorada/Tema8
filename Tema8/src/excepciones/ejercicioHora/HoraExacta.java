@@ -1,8 +1,8 @@
-package ejercicioHora;
+package excepciones.ejercicioHora;
 
-import ejercicio02.NegativeHourException;
-import ejercicio02.NegativeMinuteException;
-import ejercicio02.NegativeSecondException;
+import excepciones.ejercicio02.NegativeHourException;
+import excepciones.ejercicio02.NegativeMinuteException;
+import excepciones.ejercicio02.NegativeSecondException;
 
 public class HoraExacta extends Hora{
 
