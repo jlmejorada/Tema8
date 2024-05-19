@@ -14,7 +14,7 @@ public class Ejercicio01 {
 		double media = 0;
 		
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("src/ficheros.ejercicio01/NumerosReales.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\mamej\\git\\Tema8\\Tema8\\src\\ficheros\\ejercicio01\\NumerosReales.txt"));
 			try {
 				linea = br.readLine();
 				cadena = linea.split(" ");
