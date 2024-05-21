@@ -1,8 +1,10 @@
 package excepciones.ejercicio02;
 
-public class NegativeSecondException extends Exception {
+public class NegativeSecondException extends Exception{
 
+	@Override
 	public String toString() {
-		return "Segundos negativos";
+		
+		return "Error, segundos negativos";
 	}
 }

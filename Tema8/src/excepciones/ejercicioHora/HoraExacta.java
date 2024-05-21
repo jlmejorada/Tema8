@@ -8,22 +8,24 @@ public class HoraExacta extends Hora{
 
 	private int segundo;
 	
-	public HoraExacta(int hora, int minuto, int segundo) throws NegativeHourException, NegativeMinuteException, NegativeSecondException {
+	public HoraExacta(int hora, int minuto, int segundo) throws NegativeHourException, NegativeMinuteException, NegativeSecondException{
 		super(hora, minuto);
 		
 		if (segundo >= 0 && segundo < 60) {
 			this.segundo = segundo;
-		} else {
+		} else if(segundo<0) {
 			throw new NegativeSecondException();
 		}
 		
 	}
 	
-	boolean setSegundo(int valor) {
+	boolean setSegundo(int valor)throws NegativeSecondException {
 		boolean asignado=false;
 		if (valor >= 0 && valor < 24) {
 			this.hora = valor;
 			asignado=true;
+		} else if(valor<0) {
+			throw new NegativeSecondException();
 		}
 		return asignado;
 	}

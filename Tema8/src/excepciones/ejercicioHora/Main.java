@@ -13,14 +13,15 @@ public class Main {
 		int segundo=59;
 		
 		Hora hr;
-		try {
-			hr = new Hora(hora, minuto);
-			hr.inc();		
-			System.out.println(hr);
-		} catch (NegativeHourException | NegativeMinuteException e) {
-			// TODO Auto-generated catch block
-			System.out.println(e);
-		}
+		
+			try {
+				hr = new Hora(hora, minuto);
+				hr.inc();	
+				System.out.println(hr);
+			} catch (NegativeHourException | NegativeMinuteException e) {
+				System.out.println(e);
+			}		
+		
 		
 
 		

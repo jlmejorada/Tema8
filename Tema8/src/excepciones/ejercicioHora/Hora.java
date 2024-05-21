@@ -9,15 +9,15 @@ public class Hora {
 
 	protected int minuto;
 
-	public Hora(int hora, int minuto) throws NegativeHourException,  NegativeMinuteException {
+	public Hora(int hora, int minuto) throws NegativeHourException, NegativeMinuteException{
 		if (hora >= 0 && hora < 24) {
 			this.hora = hora;
-		} else {
+		} else if (hora<0) {
 			throw new NegativeHourException();
 		}
 		if (minuto >= 0 && minuto < 60) {
 			this.minuto = minuto;
-		}else {
+		} else if (minuto<0) {
 			throw new NegativeMinuteException();
 		}
 	}
@@ -33,20 +33,24 @@ public class Hora {
 		}
 	}
 	
-	boolean setMinutos(int valor) {
+	boolean setMinutos(int valor) throws NegativeMinuteException {
 		boolean asignar=false;
 		if (valor >= 0 && valor < 60) {
 			this.minuto = valor;
 			asignar=true;
+		} else if(valor<0) {
+			throw new NegativeMinuteException();
 		}
 		return asignar;
 	}
 	
-	boolean setHoras(int valor) {
+	boolean setHoras(int valor) throws NegativeHourException {
 		boolean asignar=false;
 		if (valor >= 0 && valor < 24) {
 			this.hora = valor;
 			asignar=true;
+		} else if(valor<0) {
+			throw new NegativeHourException();
 		}
 		return asignar;
 	}
